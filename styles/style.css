@@ -251,10 +251,6 @@ ol {
   outline: none;
 }
 
-.search-form__textfield::after {
-  content: "Санкт-Петербург, например";
-}
-
 .search-form__label {
   display: flex;
   flex-direction: row;

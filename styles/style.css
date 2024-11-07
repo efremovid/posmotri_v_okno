@@ -41,7 +41,6 @@ ol {
 }
 
 .content {
-
   width: 1140px;
   height: 534px;
   display: flex;
@@ -100,7 +99,6 @@ ol {
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
-  text-align: left;
 }
 
 .content__list {
@@ -185,7 +183,6 @@ ol {
 
 .content__video-card-description-container {
   position: relative;
-
 }
 
 .content__video-card-description-container:active {
@@ -254,8 +251,11 @@ ol {
   outline: none;
 }
 
-.search-form__label {
+.search-form__textfield::after {
+  content: "Санкт-Петербург, например";
+}
 
+.search-form__label {
   display: flex;
   flex-direction: row;
   align-items: center;

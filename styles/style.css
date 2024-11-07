@@ -42,16 +42,13 @@ ol {
 
 .content {
   width: 1140px;
-  height: 534px;
   display: flex;
   gap: 30px;
 }
 
 .content__details {
-  top: 2px;
   position: relative;
   width: 399px;
-  width: 534px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,7 +56,6 @@ ol {
 
 .result {
   width: 711px;
-  height: 456px;
   margin-top: 78px;
   display: flex;
   flex-direction: column;
@@ -71,7 +67,6 @@ ol {
   display: block;
   width: 711px;
   height: 386px;
-  opacity: 0px;
 }
 
 .result__video {
@@ -83,8 +78,7 @@ ol {
 .title {
   position: relative;
   width: 260px;
-  height: 210px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
@@ -95,20 +89,31 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
 }
 
 .content__list {
+  width: 100%;
+  height: 298px;
   overflow: overlay;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  position: relative;
   padding-bottom: 2px;
   padding-left: 2px;
+}
+
+.content__list-item{
+  margin-bottom: 30px;
+}
+
+.content__list-item:first-child{
+  margin-top: 0px;
+}
+
+.content__list-item:last-child{
+  margin-bottom: 0px;
 }
 
 .content__card-link_current {
@@ -116,7 +121,7 @@ ol {
 }
 
 .content__card-link {
-  width: 398px;
+  width: 100%;
   display: block;
   text-decoration: none;
   color: #FFFFFF;
@@ -125,6 +130,7 @@ ol {
   padding-left: 2px;
   margin-right: 2px;
 }
+
 
 .content__card-link:active {
   background-color: #545050;
@@ -147,7 +153,6 @@ ol {
 .content__video-card {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   object-fit: cover;
 }
 
@@ -161,32 +166,26 @@ ol {
 
 .content__video-card-title {
   text-transform: uppercase;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   text-align: left;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
   text-align: left;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
-}
-
-.content__video-card-description-container {
-  position: relative;
-}
-
-.content__video-card-description-container:active {
-  background-color: #545050;
+  object-fit: contain;
+  height: 100px;
 }
 
 .visually-hidden {
@@ -201,7 +200,6 @@ ol {
 
 .search-form {
   width: 711px;
-  height: 54px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -211,7 +209,6 @@ ol {
 
 .search-form__fieldset {
   width: 225px;
-  height: 54px;
   border: none;
   display: flex;
   flex-direction: column;
@@ -220,13 +217,12 @@ ol {
 
 .search-form__fieldset:last-of-type {
   width: 212px;
-  height: 49px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .search-form__fieldset-title {
   display: block;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -234,17 +230,22 @@ ol {
 
 .search-form__textfield {
   width: 225px;
-  height: 27px;
+  min-height: 27px;
   background-color: transparent;
   border-top: solid #FFFFFF 1px;
   border-bottom: solid #FFFFFF 1px;
   border-left: none;
   border-right: none;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
   text-align: left;
+  color: #FFF;
+}
+
+.search-form__textfield:active{
+  border: none;
 }
 
 .search-form__textfield:focus {
@@ -295,12 +296,12 @@ ol {
 
 .button {
   display: block;
-  height: 34px;
+  min-height: 34px;
   background-color: transparent;
   color: #FFFFFF;
   outline: none;
   border: 1px solid #fff;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
@@ -314,20 +315,16 @@ ol {
   text-decoration: underline;
 }
 
-.search-form__submit-button {
-  width: 194px;
-}
-
-.search-form__submit-button:focus-visible {
+.button:focus-visible {
   outline: solid #FFFFFF 1px;
   outline-offset: 1px;
+}
+
+.search-form__submit-button {
+  min-width: 194px;
 }
 
 .more-button {
-  width: 399px;
+  width: 100%;
 }
 
-.more-button:focus-visible {
-  outline: solid #FFFFFF 1px;
-  outline-offset: 1px;
-}
